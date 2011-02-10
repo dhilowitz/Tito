@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<!-- the "no-js" class is for Modernizr. -->
+
+<head class="html5reset-kitchensink-commented">
+
+	<meta charset="utf-8" />
+	
+	<title>TITO</title>
+	
+	<meta name="description" content="TITO" />
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="author" content="Tito" />
+	<meta name="Copyright" content="Copyright David Hilowitz 2010. All Rights Reserved." />
+
+	<meta name="DC.title" content="Tito" />
+	<meta name="DC.subject" content="Tito -- An HTML-based Music Sequencer" />
+	<meta name="DC.creator" content="Tito" />
+	
+	<meta name="google-site-verification" content="" />
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	<!--
+	<link rel="shortcut icon" href="_/img/favicon.png"/>
+	--><!-- This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK
+		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
+	
+	<link rel="apple-touch-icon" href="_/img/custom_icon.png"/>
+	<!-- The is the icon for iOS's Web Clip.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+
+	<link rel="stylesheet" href="_/css/main.css" />
+	<!-- main.css is a gateway file. You will spend your time in core.css -->
+	
+	<link rel="stylesheet" href="_/css/_print/main.css" media="print" />
+	
+	<!-- These are IE-specific conditional style sheets. 
+		 You might consider removing the ones you don't end up using. -->
+		 
+	<!--[if IE]>
+	<link rel="stylesheet" href="_/css/patches/win-ie-all.css" />
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="_/css/patches/win-ie7.css" />
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" href="_/css/patches/win-ie-old.css" />
+	<![endif]-->
+	
+	<!-- The following is STRONGLY OPTIONAL, but useful if you really need to kick IE in the pants.
+		 There are different flavors; pick the one right for your project: http://code.google.com/p/ie7-js/ -->
+	<!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js"></script>
+	<![endif]-->
+	
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="_/js/useful.js"></script>
+    <script src="_/js/swfobject.js"></script>
+    <script type="text/javascript">
+		var sound_generation = null;
+		var flashvars = {};
+    	var params = {allowScriptAccess:"always"};
+	    var attributes = { id: "sound_generation", name: "sound_generation" };
+		
+		swfobject.embedSWF("_/swf/SoundGeneration2.swf", 
+						   "sound_generation", 
+						   "1", 
+						   "1", 
+						   "10.0.0", 
+						   "expressInstall.swf", 
+						   flashvars, 
+						   params, 
+						   attributes, 
+						   function callbackFn(e) {sound_generation = e.ref;
+						   
+							}
+						   );
+		
+		function playNote(text) {   
+			if(sound_generation == null) return;
+			if(typeof(sound_generation) == 'undefined') return;
+			if(!isMuted)
+				sound_generation.playNote(text);
+		}  
+		
+		function toggleMute() {   
+			isMuted = !isMuted;
+			$('#muteButton').text((isMuted) ? "ON" : "OFF"); 
+			sound_generation.setMute(isMuted);     
+		}
+		</script>
+	<script src="_/js/functions.js"></script>
+	
+	<!-- Either Modernizr OR the HTML5 Shiv script is required if you want IE compatability, AND you want to use the new, 
+		 more-semantic HTML5 elements (header, article, footer, etc) 
+		 - we've only included Modernizr; HTML5 Shiv can be found here: http://html5shiv.googlecode.com -->
+	
+	<!-- MODERNIZR: http://www.modernizr.com/
+		 If you're using this, you don't need the HTML5 Shiv script below -->
+	<script src="_/js/modernizr-1.5.min.js"></script>
+	
+	<!-- don't forget Google Analytics -->
+	<script src="_/js/tito.js"></script>
+
+	
+	
+</head>
+
+<body id="www-domain-com" onDragStart="return false;">
+<div id="sound_generation"></div>
+<div id="titleBox">
+	<div id="title">
+    	<span id="titleTitle">TITO</span>
+       <div id="titleCaption">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gravity&nbsp;-&nbsp;controlled<br/>musical instrument
+        </div>
+    </div>
+</div>
+<div id="sharing_box" style=";"> 
+	<div id="facebook_button"> 
+		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.adornomedia.com%2Ftito&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=dark&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe> 
+	</div> 
+	
+</div> 
+<div id="seq1_box">
+	
+  <canvas id="tito_canvas" width="736" height="489"></canvas>  
+</div>
+
+
+<script type="text/javascript" language="javascript">
+	var myTito = new Tito("tito_canvas");
+	var interval = setInterval(function mainLoop() {myTito.update();}, 41);
+	var isMuted = false;
+		
+</script>
+<div style="font-family:LG2"><b>MUTE: </b><span id="muteButton" name='muteButton' onClick="toggleMute();" style="cursor:pointer;font-weight:normal;">OFF</span></div>
+
+
+<div style="font-family:'Courier New', Courier, monospace;display:none">
+mouseX: <span id="mouseX"></span> / mouseY: <span id="mouseY"></span>
+</div>
+
+<div style="font-family:'Courier New', Courier, monospace;display:none">
+y: <span id="ball_y"></span><br/>
+vY: <span id="ball_vY"></span><br/>
+ay: <span id="ball_aY"></span><br/>&nbsp;
+<input type='button' name='Move Balls' value='Move Balls' onClick="myTito.moveBalls();"/>
+</div>
+<div style="display:none;">
+    <input type='button' name='Play' value='A3' onClick="playNote(57);"/>
+    <input type='button' name='Play' value='A#3' onClick="playNote(58);"/>
+    <input type='button' name='Play' value='B3' onClick="playNote(59);"/>
+    <input type='button' name='Play' value='C4' onClick="playNote(60);"/>
+    <input type='button' name='Play' value='C#4' onClick="playNote('61');"/>
+    <input type='button' name='Play' value='D4' onClick="playNote('62');"/>
+    <input type='button' name='Play' value='D#4' onClick="playNote('63');"/>
+    <input type='button' name='Play' value='E4' onClick="playNote('64');"/>
+    <input type='button' name='Play' value='F4' onClick="playNote('65');"/>
+    <input type='button' name='Play' value='F#4' onClick="playNote('F#4');"/>
+    <input type='button' name='Play' value='G4' onClick="playNote('G4');"/>
+    <input type='button' name='Play' value='G#4' onClick="playNote('G#4');"/>
+    <input type='button' name='Play' value='A4' onClick="playNote('A4');"/>
+    <input type='button' name='Play' value='A#4' onClick="playNote('A#4');"/>
+    <input type='button' name='Play' value='B4' onClick="playNote('B4');"/>
+    <input type='button' name='Play' value='C5' onClick="playNote('C5');"/>
+    <input type='button' name='Play' value='C#5' onClick="playNote('C#5');"/>
+    <input type='button' name='Play' value='D5' onClick="playNote('D5');"/>
+    <input type='button' name='Play' value='D#5' onClick="playNote('D#5');"/>
+    <input type='button' name='Play' value='E5' onClick="playNote('E5');"/>
+    <input type='button' name='Play' value='F5' onClick="playNote('F5');"/>
+    <input type='button' name='Play' value='F#5' onClick="playNote('F#5');"/>
+    <input type='button' name='Play' value='G5' onClick="playNote('G5');"/>
+    <input type='button' name='Play' value='G#5' onClick="playNote('G#5');"/>
+    <input type='button' name='Play' value='A5' onClick="playNote('A5');"/>
+</div>
+</body>
+</html>
