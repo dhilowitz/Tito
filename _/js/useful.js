@@ -130,3 +130,15 @@ function pointInRect(pointX, pointY, rectX1, rectY1, rectX2, rectY2)
 		return true;
 	}
 }
+
+
+// TEXT MANIPULATION
+//From http://sujithcjose.blogspot.com/2007/10/zero-padding-in-java-script-to-add.html
+function zeroPad(num,count)
+{
+	var numZeropad = num + '';
+	while(numZeropad.length < count) {
+		numZeropad = "0" + numZeropad;
+	}
+	return numZeropad;
+}

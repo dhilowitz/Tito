@@ -63,25 +63,8 @@
 	<script src="_/js/jquery.min.js"></script>
     <script src="_/js/useful.js"></script>
     <script src="_/js/swfobject.js"></script>
+	<script src="_/js/sound_generation_limited_voices.js"></script>
     <script type="text/javascript">
-		var sound_generation = null;
-		var flashvars = {};
-    	var params = {allowScriptAccess:"always"};
-	    var attributes = { id: "sound_generation", name: "sound_generation" };
-		
-		swfobject.embedSWF("_/swf/SoundGeneration2.swf", 
-						   "sound_generation", 
-						   "1", 
-						   "1", 
-						   "10.0.0", 
-						   "expressInstall.swf", 
-						   flashvars, 
-						   params, 
-						   attributes, 
-						   function callbackFn(e) {sound_generation = e.ref;
-						   
-							}
-						   );
 		
 		function playNote(text) {   
 			if(sound_generation == null) return;
@@ -93,7 +76,7 @@
 		function toggleMute() {   
 			isMuted = !isMuted;
 			$('#muteButton').text((isMuted) ? "ON" : "OFF"); 
-			sound_generation.setMute(isMuted);     
+			//sound_generation.setMute(isMuted);     
 		}
 		</script>
 	<script src="_/js/functions.js"></script>
@@ -149,7 +132,9 @@ BY DAVID HILOWITZ (<a href="http://twitter.com/dhilowitz" target="_blank" style=
 	var myTito = new Tito("tito_canvas");
 	var interval = setInterval(function mainLoop() {myTito.update();}, 41);
 	var isMuted = false;
-		
+	
+	var sound_generation = new SoundGeneration(10);
+	sound_generation.init();
 </script>
 <div style="font-family:LG2;display:block"><b>MUTE: </b><span id="muteButton" name='muteButton' onClick="toggleMute();" style="cursor:pointer;font-weight:normal;">OFF</span></div>
 
