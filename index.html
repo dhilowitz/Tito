@@ -59,7 +59,8 @@
 	<![endif]-->
 	
 	<!-- jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+	<script src="_/js/jquery.min.js"></script>
     <script src="_/js/useful.js"></script>
     <script src="_/js/swfobject.js"></script>
     <script type="text/javascript">
@@ -97,19 +98,26 @@
 		</script>
 	<script src="_/js/functions.js"></script>
 	
-	<!-- Either Modernizr OR the HTML5 Shiv script is required if you want IE compatability, AND you want to use the new, 
-		 more-semantic HTML5 elements (header, article, footer, etc) 
-		 - we've only included Modernizr; HTML5 Shiv can be found here: http://html5shiv.googlecode.com -->
 	
-	<!-- MODERNIZR: http://www.modernizr.com/
-		 If you're using this, you don't need the HTML5 Shiv script below -->
 	<script src="_/js/modernizr-1.5.min.js"></script>
 	
 	<!-- don't forget Google Analytics -->
 	<script src="_/js/tito.js"></script>
 
 	
+	<script type="text/javascript">
 	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-239145-6']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
 
 <body id="www-domain-com" onDragStart="return false;">
@@ -121,6 +129,9 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gravity&nbsp;-&nbsp;controlled<br/>musical instrument
         </div>
     </div>
+</div>
+<div id="attribution">
+BY DAVID HILOWITZ (<a href="http://twitter.com/dhilowitz" target="_blank" style="color:blue">@DHILOWITZ</a>)
 </div>
 <div id="sharing_box" style=";"> 
 	<div id="facebook_button"> 
@@ -140,7 +151,7 @@
 	var isMuted = false;
 		
 </script>
-<div style="font-family:LG2"><b>MUTE: </b><span id="muteButton" name='muteButton' onClick="toggleMute();" style="cursor:pointer;font-weight:normal;">OFF</span></div>
+<div style="font-family:LG2;display:block"><b>MUTE: </b><span id="muteButton" name='muteButton' onClick="toggleMute();" style="cursor:pointer;font-weight:normal;">OFF</span></div>
 
 
 <div style="font-family:'Courier New', Courier, monospace;display:none">

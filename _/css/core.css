@@ -103,13 +103,26 @@ abbr {
 	
 }
 
+#attribution
+{
+	width:200px;
+	height:21px;
+	background-color:black;
+	position:absolute;
+	top:65px;
+	left:358px;
+	font-size:14pt;
+	font-family:LG2;
+}
+
+
 #sharing_box
 {
 	width:90px;
 	height:21px;
 	background-color:black;
 	position:absolute;
-	top:60px;
+	top:67px;
 	left:618px;
 	
 }

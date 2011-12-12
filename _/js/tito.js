@@ -25,56 +25,56 @@ var KEY_DATA =
 	[
 	 	/*Major*/
 		{"keySelectorLabel": {"letter":"A", "accidental":"", "majOrMin":"maj"},
-			"notes":[57,61,64,67,69,73,76,79,81,85,88,91,93,97,100,103]},
+			"notes":[57,61,64,68,69,73,76,80,81,85,88,92,93,97,100,104]},
 		{"keySelectorLabel": {"letter":"E", "accidental":"", "majOrMin":"maj"},
-			"notes":[64,68,71,74,76,80,83,86,88,92,95,98,100,104,107,110]},	
+			"notes":[64,68,71,75,76,80,83,87,88,92,95,99,100,104,107,111]},	
 		{"keySelectorLabel": {"letter":"B", "accidental":"", "majOrMin":"maj"},
-			"notes":[59,63,66,69,71,75,78,81,83,87,90,93,95,99,102,105]},
+			"notes":[59,63,66,70,71,75,78,82,83,87,90,94,95,99,102,106]},
 		{"keySelectorLabel": {"letter":"F", "accidental":"#", "majOrMin":"maj"},
-			"notes":[66,70,73,76,78,82,85,88,90,94,97,100,102,106,109,112]},	
+			"notes":[66,70,73,77,78,82,85,89,90,94,97,101,102,106,109,113]},	
 		{"keySelectorLabel": {"letter":"C", "accidental":"#", "majOrMin":"maj"},
-			"notes":[61,65,68,71,73,77,80,83,85,89,92,95,97,101,104,107]},	
+			"notes":[61,65,68,72,73,77,80,84,85,89,92,96,97,101,104,108]},	
 		{"keySelectorLabel": {"letter":"G", "accidental":"#", "majOrMin":"maj"},
-			"notes":[68,72,75,78,80,84,87,90,92,96,99,102,104,108,111,114]},	
+			"notes":[68,72,75,79,80,84,87,91,92,96,99,103,104,108,111,115]},	
 		{"keySelectorLabel": {"letter":"D", "accidental":"#", "majOrMin":"maj"},
-			"notes":[63,67,70,73,75,79,82,85,87,91,94,97,99,103,106,109]},	
+			"notes":[63,67,70,74,75,79,82,86,87,91,94,98,99,103,106,110]},	
 		{"keySelectorLabel": {"letter":"A", "accidental":"#", "majOrMin":"maj"},
-			"notes":[58,62,65,68,70,74,77,80,82,86,89,92,94,98,101,104]},	
+			"notes":[58,62,65,69,70,74,77,81,82,86,89,93,94,98,101,105]},	
 		{"keySelectorLabel": {"letter":"F", "accidental":"", "majOrMin":"maj"},
-			"notes":[65,69,72,75,77,81,84,87,89,93,96,99,101,105,108,111]},	
+			"notes":[65,69,72,76,77,81,84,88,89,93,96,100,101,105,108,112]},	
 		{"keySelectorLabel": {"letter":"C", "accidental":"", "majOrMin":"maj"},
-			"notes":[60,64,67,70,72,76,79,82,84,88,91,94,96,100,103,106]},	
+			"notes":[60,64,67,71,72,76,79,83,84,88,91,95,96,100,103,107]},	
 		{"keySelectorLabel": {"letter":"G", "accidental":"", "majOrMin":"maj"},
-			"notes":[67,71,74,77,79,83,86,89,91,95,98,101,103,107,110,113]},	
+			"notes":[67,71,74,78,79,83,86,90,91,95,98,102,103,107,110,114]},	
 		{"keySelectorLabel": {"letter":"D", "accidental":"", "majOrMin":"maj"},
-			"notes":[62,66,69,72,74,78,81,84,86,90,93,96,98,102,105,108]},
+			"notes":[62,66,69,73,74,78,81,85,86,90,93,97,98,102,105,109]},
 			
 			
-		/*MInor*/
+		/*Minor*/
 		{"keySelectorLabel": {"letter":"F", "accidental":"#", "majOrMin":"min"},
-			"notes":[66,69,72,75,78,81,84,87,90,93,96,99,102,105,108,111]},	//F#min
+			"notes":[66,69,73,76,78,81,85,88,90,93,97,100,102,105,109,112]},	//F#min
 		{"keySelectorLabel": {"letter":"C", "accidental":"#", "majOrMin":"min"},
-			"notes":[61,64,67,70,73,76,79,82,85,88,91,94,97,100,103,106]},	//C#min
+			"notes":[61,64,68,71,73,76,80,83,85,88,92,95,97,100,104,107]},	//C#min
 		{"keySelectorLabel": {"letter":"G", "accidental":"#", "majOrMin":"min"},
-			"notes":[68,71,74,77,80,83,86,89,92,95,98,101,104,107,110,113]},//G#min	
+			"notes":[68,71,75,78,80,83,87,90,92,95,99,102,104,107,111,114]},//G#min	
 		{"keySelectorLabel": {"letter":"D", "accidental":"#", "majOrMin":"min"},
-			"notes":[63,66,69,72,75,78,81,84,87,90,93,96,99,102,105,108]},	//D#min
+			"notes":[63,66,70,73,75,78,82,85,87,90,94,97,99,102,106,109]},	//D#min
 		{"keySelectorLabel": {"letter":"A", "accidental":"#", "majOrMin":"min"},
-			"notes":[58,61,64,67,70,73,76,79,82,85,88,91,94,97,100,103]},	//A#min
+			"notes":[58,61,65,68,70,73,77,80,82,85,89,92,94,97,101,104]},	//A#min
 		{"keySelectorLabel": {"letter":"F", "accidental":"", "majOrMin":"min"},
-			"notes":[65,68,71,74,77,80,83,86,89,92,95,98,101,104,107,110]},	//Fmin
+			"notes":[65,68,72,75,77,80,84,87,89,92,96,99,101,104,108,111]},	//Fmin
 		{"keySelectorLabel": {"letter":"C", "accidental":"", "majOrMin":"min"},
-			"notes":[60,63,66,69,72,75,78,81,84,87,90,93,96,99,102,105]},	//Cmin
+			"notes":[60,63,67,70,72,75,79,82,84,87,91,94,96,99,103,106]},	//Cmin
 		{"keySelectorLabel": {"letter":"G", "accidental":"", "majOrMin":"min"},
-			"notes":[67,70,73,76,79,82,85,88,91,94,97,100,103,106,109,112]},	//Gmin
+			"notes":[67,70,74,77,79,82,86,89,91,94,98,101,103,106,110,113]},	//Gmin
 		{"keySelectorLabel": {"letter":"D", "accidental":"", "majOrMin":"min"},
-		"notes":[62,65,68,71,74,77,80,83,86,89,92,95,98,101,104,107]},	//Dmin
+			"notes":[62,65,69,72,74,77,81,84,86,89,93,96,98,101,105,108]},	//Dmin
 		{"keySelectorLabel": {"letter":"A", "accidental":"", "majOrMin":"min"},
-			"notes":[57,60,63,66,69,72,75,78,81,84,87,90,93,96,99,102]},	//Amin
+			"notes":[57,60,64,67,69,72,76,79,81,84,88,91,93,96,100,103]},	//Amin
 		{"keySelectorLabel": {"letter":"E", "accidental":"", "majOrMin":"min"},
-			"notes":[64,67,70,73,76,79,82,85,88,91,94,97,100,103,106,109]},	//Emin
+			"notes":[64,67,71,74,76,79,83,86,88,91,95,98,100,103,107,110]},	//Emin
 		{"keySelectorLabel": {"letter":"B", "accidental":"", "majOrMin":"min"},
-			"notes":[59,62,65,68,71,74,77,80,83,86,89,92,95,98,101,104]}	//Bmin
+			"notes":[59,62,66,69,71,74,78,81,83,86,90,93,95,98,102,105]}	//Bmin
 	];
 
 function Ball(ballNumber)
@@ -135,6 +135,7 @@ Tito.prototype.onMouseMove = function onMouseMove(evt)
 	$('#mouseX').text(evt.pageX - canvas.offset().left);
 	$('#mouseY').text(evt.pageY - canvas.offset().top);
 	
+	//Check Key Selectors
 	this.keyHoveredAbove = -1;
 	for(var row=0;row<12;row++)
 		for(var column=0;column<2;column++)
@@ -152,7 +153,40 @@ Tito.prototype.onMouseMove = function onMouseMove(evt)
 				}
 			
 		}
-	d('mouseMove');
+		
+	//Check ball grid
+	if(pointInRect(mouseX, mouseY, 	GRID_ORIGIN_X, this.convertGridY(GRID_HEIGHT), 
+		GRID_ORIGIN_X + GRID_WIDTH, this.convertGridY(0)))
+	{
+		for(var column=0;column<16;column++)
+		{		
+			rectX1 = this.convertGridX(GRID_START_X + column*GRID_DISTANCE_BETWEEN_LINES);
+			rectY1 = this.convertGridY(GRID_HEIGHT);
+			rectX2 = this.convertGridX(GRID_START_X + (column+1)*GRID_DISTANCE_BETWEEN_LINES);
+			rectY2 = this.convertGridY(0);
+			
+			//d('rectX1 is ' + rectX1);
+			//d('rectY1 is ' + rectY1);
+			//d('rectX2 is ' + rectX2);
+			//d('rectY2 is ' + rectY2);
+		
+			if(pointInRect(mouseX,mouseY, rectX1, rectY1, rectX2, rectY2))
+			{
+					//d("In column: " + column + " with y coord of " + this.convertGridY(mouseY));
+					var yValue = this.convertGridY(mouseY);
+					if(yValue > 0)
+					{
+						this.balls[column].y = yValue;
+						this.balls[column].vY = 0;
+					}
+			}
+			
+		}
+		
+	}
+	
+		
+	//d('mouseMove');
 }
 
 Tito.prototype.onMouseClick = function onMouseClick(evt)
