@@ -1,0 +1,4 @@
+TITO
+====
+
+A musical instrument that uses a bouncing ball gravity model to trigger and manipulate audio samples. See it here: [http://www.chromeexperiments.com/detail/tito/]
