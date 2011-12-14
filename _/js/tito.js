@@ -333,7 +333,7 @@ Tito.prototype.drawKeySelector = function drawKeySelector(ctx) {
 	//Draw the word "KEY"
 	ctx.fillStyle = "rgb(255,255,255)";
 
-	ctx.font = "20pt LG2";
+	ctx.font = "20pt LeagueGothicRegular";
 	ctx.fillText("KEY", KEY_SELECTOR_X, 225);
 	
 	//Draw line segment 1
@@ -424,18 +424,18 @@ Tito.prototype.drawKeySelectorBox = function drawKeySelectorBox(ctx, boxX, boxY,
 		
 	if(typeof(accidental) != 'undefined' && accidental.length > 0)
 	{
-		ctx.font = "14pt LG2";
+		ctx.font = "14pt LeagueGothicRegular";
 		ctx.fillText(letter, boxX+6, boxY+19);
 		
-		ctx.font = "7.5pt LG2";
+		ctx.font = "7.5pt LeagueGothicRegular";
 		ctx.fillText(accidental, boxX+13, boxY+13);
 		
-		ctx.font = "14pt LG2";
+		ctx.font = "14pt LeagueGothicRegular";
 		ctx.fillText(majOrMin, boxX+20, boxY+19);
 	}
 	else
 	{
-		ctx.font = "14pt LG2";
+		ctx.font = "14pt LeagueGothicRegular";
 		ctx.fillText(letter + "  " + majOrMin, boxX+6, boxY+19);
 	}
 	
@@ -489,9 +489,9 @@ Tito.prototype.drawGraphLabels = function drawGraphLabels(ctx) {
 		var leftOffset = 7;
 		if(noteNameNumberPortion.length == 2) leftOffset = 4;
 		
-		ctx.font = "14pt LG2";
+		ctx.font = "14pt LeagueGothicRegular";
 		ctx.fillText(noteNameLetterPortion, this.convertGridX(GRID_START_X + i*GRID_DISTANCE_BETWEEN_LINES+leftOffset), this.convertGridY(yPos));
-		ctx.font = "7.5pt LG2";
+		ctx.font = "7.5pt LeagueGothicRegular";
 		ctx.fillText(noteNameNumberPortion, this.convertGridX(GRID_START_X + i*GRID_DISTANCE_BETWEEN_LINES+leftOffset+8),this.convertGridY(yPos+6));
 	
 
