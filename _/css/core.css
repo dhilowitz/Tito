@@ -33,16 +33,6 @@ img::-moz-selection {background: transparent;}
 
 }
 
-/*- Paul Irish's Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ ----------*/
-
-@font-face {
-  font-family: 'LG2';
-  src: url('../fonts/LeagueGothic.eot');
-  src: local('☺'),
-		url('../fonts/league_gothic-webfont.ttf') format('truetype'),
-         url('../fonts/LeagueGothic.svg') format('svg'), url('../fonts/LeagueGothic.otf') format('opentype');
-}
-
 @font-face {
     font-family: 'LeagueGothicRegular';
     src: url('../fonts/League_Gothic-webfont.eot');
@@ -78,7 +68,7 @@ abbr {
 
 #title
 {
-        font-family:'LG2',Helvetica Neue, Helvetica, Arial, Sans-serif;
+        font-family:'LeagueGothicRegular',Helvetica Neue, Helvetica, Arial, Sans-serif;
        	position:relative;
 	left:46px;
 	top: 15px;
@@ -116,7 +106,7 @@ abbr {
 	top:65px;
 	left:358px;
 	font-size:14pt;
-	font-family:LG2;
+	font-family:LeagueGothicRegular;
 }
 
 
