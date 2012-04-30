@@ -35,6 +35,7 @@ SoundGeneration.prototype.init = function init()
 
 SoundGeneration.prototype.playNote = function playNote(noteNumber)
 {
+	d('playNote');
 	if( (this.lastVoice + 1) >= this.numVoices) 
 		this.lastVoice = 0;
 	else 

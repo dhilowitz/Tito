@@ -62,8 +62,7 @@
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
 	<script src="_/js/jquery.min.js"></script>
     <script src="_/js/useful.js"></script>
-    <script src="_/js/swfobject.js"></script>
-	<script src="_/js/sound_generation_limited_voices.js"></script>
+	<script src="_/js/JSAudioTagSoundGeneration.js"></script>
     <script type="text/javascript">
 		
 		function playNote(text) {   
@@ -75,14 +74,13 @@
 		
 		function toggleMute() {   
 			isMuted = !isMuted;
-			$('#muteButton').text((isMuted) ? "ON" : "OFF"); 
-			//sound_generation.setMute(isMuted);     
+			$('#muteButton').text((isMuted) ? "ON" : "OFF");   
 		}
 		</script>
 	<script src="_/js/functions.js"></script>
 	
 	
-	<script src="_/js/modernizr-1.5.min.js"></script>
+	<script src="_/js/modernizr-2.5.3.custom.js"></script>
 	
 	<!-- don't forget Google Analytics -->
 	<script src="_/js/tito.js"></script>
@@ -133,48 +131,13 @@ BY DAVID HILOWITZ (<a href="http://twitter.com/dhilowitz" target="_blank" style=
 	var interval = setInterval(function mainLoop() {myTito.update();}, 41);
 	var isMuted = false;
 	
-	var sound_generation = new SoundGeneration(10);
+	var sound_generation = new JSAudioTagSoundGeneration(16);
 	sound_generation.init();
 </script>
 <div style="font-family:LG2;display:block"><b>MUTE: </b><span id="muteButton" name='muteButton' onClick="toggleMute();" style="cursor:pointer;font-weight:normal;">OFF</span></div>
 
-
-<div style="font-family:'Courier New', Courier, monospace;display:none">
-mouseX: <span id="mouseX"></span> / mouseY: <span id="mouseY"></span>
-</div>
-
-<div style="font-family:'Courier New', Courier, monospace;display:none">
-y: <span id="ball_y"></span><br/>
-vY: <span id="ball_vY"></span><br/>
-ay: <span id="ball_aY"></span><br/>&nbsp;
-<input type='button' name='Move Balls' value='Move Balls' onClick="myTito.moveBalls();"/>
-</div>
-<div style="display:none;">
+<div style="display:none;" id="debugging">
     <input type='button' name='Play' value='A3' onClick="playNote(57);"/>
-    <input type='button' name='Play' value='A#3' onClick="playNote(58);"/>
-    <input type='button' name='Play' value='B3' onClick="playNote(59);"/>
-    <input type='button' name='Play' value='C4' onClick="playNote(60);"/>
-    <input type='button' name='Play' value='C#4' onClick="playNote('61');"/>
-    <input type='button' name='Play' value='D4' onClick="playNote('62');"/>
-    <input type='button' name='Play' value='D#4' onClick="playNote('63');"/>
-    <input type='button' name='Play' value='E4' onClick="playNote('64');"/>
-    <input type='button' name='Play' value='F4' onClick="playNote('65');"/>
-    <input type='button' name='Play' value='F#4' onClick="playNote('F#4');"/>
-    <input type='button' name='Play' value='G4' onClick="playNote('G4');"/>
-    <input type='button' name='Play' value='G#4' onClick="playNote('G#4');"/>
-    <input type='button' name='Play' value='A4' onClick="playNote('A4');"/>
-    <input type='button' name='Play' value='A#4' onClick="playNote('A#4');"/>
-    <input type='button' name='Play' value='B4' onClick="playNote('B4');"/>
-    <input type='button' name='Play' value='C5' onClick="playNote('C5');"/>
-    <input type='button' name='Play' value='C#5' onClick="playNote('C#5');"/>
-    <input type='button' name='Play' value='D5' onClick="playNote('D5');"/>
-    <input type='button' name='Play' value='D#5' onClick="playNote('D#5');"/>
-    <input type='button' name='Play' value='E5' onClick="playNote('E5');"/>
-    <input type='button' name='Play' value='F5' onClick="playNote('F5');"/>
-    <input type='button' name='Play' value='F#5' onClick="playNote('F#5');"/>
-    <input type='button' name='Play' value='G5' onClick="playNote('G5');"/>
-    <input type='button' name='Play' value='G#5' onClick="playNote('G#5');"/>
-    <input type='button' name='Play' value='A5' onClick="playNote('A5');"/>
 </div>
 </body>
 </html>

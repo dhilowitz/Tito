@@ -2,6 +2,10 @@ function SoundGeneration(numVoices) {
 	this.numVoices = numVoices;
 	this.voices = new Array(this.numVoices);
 	this.lastVoice = -1;
+	this.format =	Modernizr.audio.ogg ? 'ogg' :
+	            	Modernizr.audio.mp3 ? 'mp3' :
+					Modernizr.audio.wav ? 'wav' :
+	                					'm4a';
 }
 
 SoundGeneration.prototype.init = function init()
@@ -9,7 +13,7 @@ SoundGeneration.prototype.init = function init()
 	for(var voiceIndex = 0; voiceIndex < this.numVoices; voiceIndex++)
 	{
 		this.voices[voiceIndex] = new Audio();
-		this.voices[voiceIndex].autoplay = true;
+		//this.voices[voiceIndex].autoplay = true;
 	}
 }
 
@@ -34,8 +38,7 @@ SoundGeneration.prototype.getNoteURL = function getNoteURL(noteNumber)
 {
 	if(noteNumber >= 48 && noteNumber <= 112)
 	{
-		return "autoharp/mp3/" + zeroPad(noteNumber, 3) + ".mp3"; 
-		
+		return "autoharp/" + this.format + "/" + zeroPad(noteNumber, 3) + "." + this.format; 
 	}
 	return null;
 }
